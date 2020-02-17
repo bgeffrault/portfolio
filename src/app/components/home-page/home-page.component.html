@@ -1,0 +1,160 @@
+<div >
+	<div class="containe-header">
+		<div id="header" >
+			<section class="wrapper">
+		        <div id="stars"></div>
+		        <div id="stars2"></div>
+		        <div id="stars3"></div>
+		        <div id="title">
+		            <span>BAPTISTE GEFFRAULT</span>
+		            <br>
+		            <span>WEB DEVELOPER</span>
+		        </div>
+		    </section>
+		</div>
+	</div>
+
+	
+	<div class="topnav" id="myTopnav">
+	  <a (click)="goToHome()" class="slow-transition" id="homeNav">Home</a>
+	  <a (click)="goToAbout()" class="slow-transition" id="aboutNav">About</a>
+	  <a (click)="goToPortfolio()" class="slow-transition" id="portfolioNav">Portfolio</a>
+	  <a (click)="goToContact()" class="slow-transition" id="contactNav">Contact</a>
+	</div>
+
+	<section id="aboutContainer">
+		<div class="container">
+			<div id="about" class="hidden">ABOUT</div>
+			<div id="AboutLine" class="hidden"></div>
+			<div id="skills-wrapper" class="hidden">
+				<section id="image-section" >
+					<img src="https://firebasestorage.googleapis.com/v0/b/blog-angular-training.appspot.com/o/all_pictures%2Fmoi.jpeg?alt=media&token=25cc1314-1673-4092-8839-1218a9ba174b" id="imagePerso" alt="Picture of me">
+					<span id="txtAboutMe"><h1>Who is this ?</h1>My name is Baptiste GEFFRAULT, I'm a Web Developer in Montréal and a French Engineer. I like to build different kind of things from Web applications to IoT projects.</span>
+				</section>
+				
+
+				<div class="flex flex-50-gt-sm waypoint bars-wrap animated slide-in-right" data-animation="slide-in-right">
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:70%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">CSS</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:70%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">HTML</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:60%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">Angular</span>
+	              		</div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:60%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">JavaScript</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:60%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">TypeScript</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:75%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">C++</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:60%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">Python</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:50%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">PHP</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:60%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">OOP</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:75%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">GIT</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:75%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">SQL</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="bar flex">
+	                <div class="bar fill" style="width:60%">
+	                  <div class="tag bold flex">
+	                  	<span class="verticalCenter">API</span>
+	                  </div>
+	                </div>
+	              </div>
+
+	            </div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="projectsContainer">
+		<div id="Portfolio-elements" class="hidden">
+			<span id="Portfolio">PORTFOLIO</span>
+			<div id="PortfolioLineContainer">
+				<div id="PortfolioLine"></div>
+			</div>
+		</div>
+
+		<div id="Portfolio-projects" class="hidden">
+			<div *ngFor="let project of projectsList" class="responsive grow" routerLink="project">
+			  <div class="gallery">
+			    <a>
+			      <img src={{project.photo}} >
+			    </a>
+			    <div class="desc" >{{project.title}}</div>
+			  </div>
+			</div>
+		</div>
+
+	</section>
+</div>
