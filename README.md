@@ -1,6 +1,7 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20 and use firebase for backend and storage.
+It's all the code of my personnal portfolio, modify the firebase config in the app.component.ts for your own usage. 
 
 ## Development server
 
