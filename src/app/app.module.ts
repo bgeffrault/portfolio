@@ -13,7 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent},
-  { path: 'project', component: ProjectViewComponent, pathMatch: 'full' },
+  { path: 'project/:id', component: ProjectViewComponent, pathMatch: 'full' },
   { path: 'create', component: ProjectFormComponent, pathMatch: 'full' },
 ];
 

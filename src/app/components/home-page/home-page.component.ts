@@ -40,6 +40,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnDestroy() {
         window.removeEventListener('scroll', this.scroll, true);
+        this.projectsSubscription.unsubscribe();
     }
 
   scroll = (event): void => {
@@ -210,5 +211,11 @@ export class HomePageComponent implements OnInit {
       homeNav.classList.remove("active"); 
       aboutNav.classList.remove("active");
       portfolioNav.classList.remove("active"); 
+    }
+
+    goToProject(title : string){
+      const index = this.projectsList.findIndex(element => element.title == title);
+    
+      this.router.navigateByUrl('/project/'+index);
     }
 }

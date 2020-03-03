@@ -1,7 +1,26 @@
 <app-navbar></app-navbar>
-<div class="container">
-	<div class="coming-soon">Coming soon</div>
-	<div class="spinner">
-		<div class="lds-dual-ring"></div>
+<div class="container" *ngIf="project">
+	<div class="w-100 title">{{project.title}}</div>
+	<div class="line"></div>
+	<div class="w-100 image">
+		<img src={{project.photo}}>
+	</div>
+	<div class="w-100">
+		<div class="desc">{{project.content}}</div>
+	</div>
+	<div class="w-100">
+		<div class="w-100 subTitle">Technologies</div>
+		<div class="w-100 technologies flex-container">
+			<div *ngFor="let tech of project.skills;" class="w-50">
+				<div>
+					{{tech}}
+				</div>
+			</div>
+			<!--<div *ngFor="let tech of project.skills; let e=even;" class="w-50">
+				<div *ngIf="e">
+					{{e}}
+				</div>
+			</div>-->
+		</div>
 	</div>
 </div>

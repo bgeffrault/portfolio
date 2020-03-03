@@ -146,7 +146,7 @@
 		</div>
 
 		<div id="Portfolio-projects" class="hidden">
-			<div *ngFor="let project of projectsList" class="responsive grow" routerLink="project">
+			<div *ngFor="let project of projectsList" class="responsive grow" (click)="goToProject(project.title)">
 			  <div class="gallery">
 			    <a>
 			      <img src={{project.photo}} >
