@@ -46,6 +46,7 @@ export class ProjectFormComponent implements OnInit {
       title: ['', Validators.required],
       content: ['', Validators.required],
       skills: ['', Validators.required],
+      complete: ['',],
     });
   }
 
@@ -72,12 +73,14 @@ export class ProjectFormComponent implements OnInit {
     const title = this.postForm.get('title').value;
     const content = this.postForm.get('content').value;
     const skills = this.postForm.get('skills').value;
+    const complete = this.postForm.get('complete').value;
 
     newPost.skills = skills.split(', ');
     newPost.title = title;
     newPost.content = content;
     const date = new Date();
     newPost.created_at = date.toString();
+    newPost.complete = complete;
 
     if(this.fileUrl && this.fileUrl !== '') {
       newPost.photo = this.fileUrl;

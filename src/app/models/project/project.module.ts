@@ -15,7 +15,7 @@ export class Project {
 	skills: string[];
 	created_at: string;//Pb pour sauvegarder dans firebase avec le format date
 	photo: string;
-	
+	complete : boolean;
 	constructor() {
 	}
  }
